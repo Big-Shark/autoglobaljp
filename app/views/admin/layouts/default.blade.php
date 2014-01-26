@@ -45,7 +45,7 @@
 
 	<!-- CSS -->
     {{ Basset::show('admin.css') }}
-
+    <link rel="stylesheet" href="/assets/css/bootstrap-datetimepicker.min.css" />
 	<style>
 	body {
 		padding: 60px 0;
@@ -131,10 +131,12 @@
 
 	<!-- Javascripts -->
     {{ Basset::show('admin.js') }}
-
+    <script type="text/javascript" src="/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript">
     	$('.wysihtml5').wysihtml5();
         $(prettyPrint);
+        $('[type=data]').datetimepicker();
     </script>
 
     @yield('scripts')
