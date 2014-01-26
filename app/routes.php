@@ -31,7 +31,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth'), function()
     Route::resource('customers', 'AdminCustomersController');
     //Route::resource('cars', 'AdminCarsController');
     Route::resource('orders', 'AdminOrdersController');
-    Route::get('ordersFull', 'AdminOrdersController@indexFull');
+    Route::get('ordersFull', array('uses' => 'AdminOrdersController@indexFull', 'as'=>'admin.orders.indexFull'));
 
     # User Management
     Route::get('users/{user}/show', 'AdminUsersController@getShow')
