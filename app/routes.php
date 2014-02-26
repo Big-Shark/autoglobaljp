@@ -27,11 +27,17 @@ Route::model('order', 'Order');
  */
 Route::group(array('prefix' => 'admin', 'before' => 'auth'), function()
 {
-
     Route::resource('customers', 'AdminCustomersController');
     //Route::resource('cars', 'AdminCarsController');
-    Route::resource('orders', 'AdminOrdersController');
-    Route::get('ordersFull', array('uses' => 'AdminOrdersController@indexFull', 'as'=>'admin.orders.indexFull'));
+    Route::resource('orders1', 'AdminOrders1Controller');
+    Route::post('orders1/{id}/complited', array('uses' => 'AdminOrders1Controller@complited', 'as'=>'admin.orders1.complited'));
+    Route::resource('orders2', 'AdminOrders2Controller');
+    Route::resource('orders3', 'AdminOrders3Controller');
+    Route::resource('orders4', 'AdminOrders4Controller');
+    Route::resource('orders5', 'AdminOrders5Controller');
+
+
+
 
     # User Management
     Route::get('users/{user}/show', 'AdminUsersController@getShow')

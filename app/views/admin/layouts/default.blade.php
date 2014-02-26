@@ -80,7 +80,9 @@
     			<div class="collapse navbar-collapse navbar-ex1-collapse">
     				<ul class="nav navbar-nav">
     					<li{{ (Request::is('admin') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin') }}}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-    					<li{{ (Request::is('admin/orders/*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/orders') }}}"><span class="glyphicon glyphicon-list-alt"></span> Orders</a></li>
+    					<li{{ (Request::is('admin/orders1/*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/orders1') }}}"><span class="glyphicon glyphicon-list-alt"></span> Orders1</a></li>
+    					<li{{ (Request::is('admin/orders2/*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/orders2') }}}"><span class="glyphicon glyphicon-list-alt"></span> Orders2</a></li>
+    					<li{{ (Request::is('admin/orders3/*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/orders3') }}}"><span class="glyphicon glyphicon-list-alt"></span> Orders3</a></li>
     					<li{{ (Request::is('admin/ordersFull/*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/ordersFull') }}}"><span class="glyphicon glyphicon-list-alt"></span> orders Full</a></li>
     					<li{{ (Request::is('admin/customers*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/customers') }}}"><span class="glyphicon glyphicon-bullhorn"></span> Customers</a></li>
     					<li class="dropdown{{ (Request::is('admin/users*|admin/roles*') ? ' active' : '') }}">
